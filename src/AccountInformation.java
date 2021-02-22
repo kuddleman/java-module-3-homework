@@ -5,37 +5,22 @@ public class AccountInformation {
     private String localBranchAddress;
     private String mainBranchAddress;
 
-    private static final String DEFAULT_BANK_NAME = "Bank of Seven Seas";
+    public static class AccountInformationBuilder {
+        private int bankRoutingNumber; //ok
+        private String bankName = "Bank of Seven Seas";
+        private int swiftBankCode;  //ok
+        private String localBranchAddress = "";
+        private String mainBranchAddress = "";
 
-    public AccountInformation( int bankRoutingNumber,
-                               String bankName,
-                               int swiftBankCode,
-                               String localBranchAddress,
-                               String mainBranchAddress
-                             )
-                             {
-        this.bankRoutingNumber = bankRoutingNumber;
-        this.bankName = bankName;
-        this.swiftBankCode = swiftBankCode;
-        this.localBranchAddress = localBranchAddress;
-        this.mainBranchAddress = mainBranchAddress;
+
+
+        public AccountInformationBuilder(int bankRoutingNumber, int swiftBankCode){
+            this.bankRoutingNumber = bankRoutingNumber;
+            this.swiftBankCode = swiftBankCode;
+
+        }
+
+
+
     }
-
-    public AccountInformation( int bankRoutingNumber,
-                               int swiftBankCode,
-                               String localBranchAddress,
-                               String mainBranchAddress
-                              )
-                              {
-        this(bankRoutingNumber, DEFAULT_BANK_NAME, swiftBankCode,
-                localBranchAddress, mainBranchAddress);
-    }
-
-
-
-
-
-
-
-
 }
