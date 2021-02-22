@@ -14,9 +14,9 @@ public class AccountInformation {
     }
 
     public static class AccountInformationBuilder {
-        private int bankRoutingNumber; //ok
+        private int bankRoutingNumber; //ok  required
         private String bankName = "Bank of Seven Seas";
-        private int swiftBankCode;  //ok
+        private int swiftBankCode;  //ok  required
         private String localBranchAddress = "";
         private String mainBranchAddress = "";
 
