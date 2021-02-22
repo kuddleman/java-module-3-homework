@@ -35,4 +35,9 @@ public class CertificateOfDeposit extends Account {
         System.out.println("Your Certificate of Deposit has been extended to " + newDate);
 
     }
+
+    @Override
+    public void accountFees(){
+        System.out.println("Certificate of Deposit only incurs a fee for early withdrawal.");
+    }
 }

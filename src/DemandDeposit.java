@@ -28,4 +28,6 @@ public abstract class DemandDeposit extends Account {
         Account.increaseTotalDepositsInAllAccounts(amount);
     }
 
+    public abstract void accountFees();
+
 }

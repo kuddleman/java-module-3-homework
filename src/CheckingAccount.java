@@ -13,5 +13,10 @@ public class CheckingAccount extends DemandDeposit{
 
     }
 
+    @Override
+    public void accountFees(){
+        System.out.println("Checking account fee is based on average monthly balance.");
+    }
+
 }
 

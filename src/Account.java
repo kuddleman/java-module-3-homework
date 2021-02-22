@@ -96,6 +96,9 @@ public abstract class Account implements Comparable<Account> {
 
         return Integer.compare(initialDeposit, act.initialDeposit);
     }
+    public abstract void accountFees();
+
+
 
 
 

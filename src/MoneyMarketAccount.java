@@ -9,5 +9,10 @@ public class MoneyMarketAccount extends DemandDeposit {
         super(firstName,secondName,anAccountNumber, anInitialDeposit, aTaxStatus);
     }
 
+    @Override
+    public void accountFees(){
+        System.out.println("Money Market Account account fee is based on average monthly balance.");
+    }
+
 
 }

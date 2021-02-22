@@ -7,6 +7,8 @@ public class AccountInformationTester {
         private String localBranchAddress = "";
         private String mainBranchAddress = "";
          */
+
+        // M3 USING BUILDER
         AccountInformation ai1 = new AccountInformation.AccountInformationBuilder(345,578)
                 .bankName("Another Bank Name")
                 .localBranchAddress("924 Presidio Ave, SF, CA  94115")
