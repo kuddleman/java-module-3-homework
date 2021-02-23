@@ -45,6 +45,12 @@ public abstract class Account implements Comparable<Account> {
 
     }
 
+    // constructor for Swiss accounts:
+    public Account(int accountNumber, int anInitialDeposit) {
+        this.accountNumber = accountNumber;
+        this.initialDeposit = anInitialDeposit;
+    }
+
     // Getters
     public String getName1() {
         return name1;
