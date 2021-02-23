@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AccountsTester {
     public static void main(String[] args) {
@@ -47,10 +48,16 @@ public class AccountsTester {
         accountList.add(cd1);
         accountList.add(cd2);
 
+        // print out all accounts:
+     /*
         for (Account act : accountList) {
             System.out.println(act + "\n");
         }
+     */
 
+     // M3 USING COMPARATOR
+     Collections.sort(accountList, Account.NAME_COMPARATOR);
+     System.out.println(accountList);
 
 
     }

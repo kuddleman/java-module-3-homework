@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 // M2 HOMEWORK ENUM USE
 public abstract class Account implements Comparable<Account> {
     private String name1;
@@ -9,6 +11,18 @@ public abstract class Account implements Comparable<Account> {
     private TaxStatus taxStatus;
 
     private static int totalDepositsInAllAccounts = 0;
+
+    // M3 USING COMPARTOR
+    public final static Comparator<Account> NAME_COMPARATOR = new AccountNameComparator();
+
+    private static class AccountNameComparator implements Comparator<Account> {
+        @Override
+        public int compare(Account a1, Account a2) {
+           return a1.name1.compareToIgnoreCase(a2.name1);
+        }
+    }
+
+
 
     // constructor for single owner account
     // M3 USING STRATEGY
