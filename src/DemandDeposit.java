@@ -1,15 +1,17 @@
 public abstract class DemandDeposit extends Account {
 
     // constructor for single owner account
-    public DemandDeposit(String firstName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus) {
-        super(firstName, anAccountNumber, anInitialDeposit, aTaxStatus);
+    // M3 USING STRATEGY
+    public DemandDeposit(String firstName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus, AccountFees accountFees) {
+        super(firstName, anAccountNumber, anInitialDeposit, aTaxStatus, accountFees);
 
 
     }
 
     // constructor for joint-owner account
-    public DemandDeposit(String firstName, String secondName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus) {
-        super(firstName,secondName,anAccountNumber,anInitialDeposit, aTaxStatus);
+    // M3 USING STRATEGY
+    public DemandDeposit(String firstName, String secondName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus, AccountFees accountFees) {
+        super(firstName,secondName,anAccountNumber,anInitialDeposit, aTaxStatus, accountFees);
 
     }
 

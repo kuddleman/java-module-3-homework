@@ -3,14 +3,17 @@ public class CertificateOfDeposit extends Account {
     private String endDate;  // date funds in CD can be withdrawn
 
     // constructor for single owner account
+
+    // M3 USING STRATEGY
     public CertificateOfDeposit (String firstName, int anAccountNumber, int anInitialDeposit, String anEndDate, TaxStatus aTaxStatus) {
-        super(firstName, anAccountNumber, anInitialDeposit, aTaxStatus);
+        super(firstName, anAccountNumber, anInitialDeposit, aTaxStatus, new AccountWithoutFees());
         this.endDate = anEndDate;
     }
 
     // constructor for joint-owner account
+    // M3 USING STRATEGY
     public CertificateOfDeposit (String firstName, String secondName, int anAccountNumber, int anInitialDeposit, String anEndDate, TaxStatus aTaxStatus) {
-        super(firstName,secondName,anAccountNumber,anInitialDeposit, aTaxStatus);
+        super(firstName,secondName,anAccountNumber,anInitialDeposit, aTaxStatus, new AccountWithoutFees());
         this.endDate = anEndDate;
 
         //M2 HOMEWORK STATIC

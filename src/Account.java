@@ -4,25 +4,29 @@ public abstract class Account implements Comparable<Account> {
     private String name2;
     private int accountNumber;
     private int initialDeposit;
+    private AccountFees accountFees;
 
     private TaxStatus taxStatus;
 
     private static int totalDepositsInAllAccounts = 0;
 
     // constructor for single owner account
-    public Account(String firstName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus) {
+    // M3 USING STRATEGY
+    public Account(String firstName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus, AccountFees accountFees) {
         this.name1 = firstName;
         this.accountNumber = anAccountNumber;
         this.initialDeposit = anInitialDeposit;
         this.taxStatus = aTaxStatus;
+        this.accountFees = accountFees;
+
 
         // M2 HOMEWORK STATIC
         Account.totalDepositsInAllAccounts += anInitialDeposit;
     }
 
     // constructor for joint-owner account
-    public Account(String firstName, String secondName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus) {
-        this(firstName, anAccountNumber, anInitialDeposit, aTaxStatus);
+    public Account(String firstName, String secondName, int anAccountNumber, int anInitialDeposit, TaxStatus aTaxStatus, AccountFees accountFees) {
+        this(firstName, anAccountNumber, anInitialDeposit, aTaxStatus, accountFees);
         this.name2 = secondName;
 
     }
@@ -96,7 +100,9 @@ public abstract class Account implements Comparable<Account> {
 
         return Integer.compare(initialDeposit, act.initialDeposit);
     }
-    public abstract void accountFees();
+    public void accountFees(){
+        accountFees.accountFees();
+    }
 
 
 
